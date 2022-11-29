@@ -707,7 +707,7 @@ button {
         text-align: center;
     }
     .start-screen__title {
-        width: 100%;
+        width: 250px;
         font-size: var(--fs-h3-m);
         letter-spacing: var(--lettersp1-btn);
         text-align: center;
@@ -722,6 +722,7 @@ button {
         width: 100%;
         align-items: center;
     }
+    .about__title {width: 250px;}
     .about__text-box {
         gap: 22px;
         width: 270px;
@@ -805,6 +806,7 @@ button {
         width: 300px;
         align-items: center;
     }
+    .donation__title {width: 228px;}
     .donation__subtitle {
         text-align: center;
         line-height: var(--line-height-p-l-menu);
@@ -840,6 +842,7 @@ button {
         height: 222px;
     }
     .locations__boston {margin: 0;}
+    .locations__title {width: 290px;}
     .footer__image {
         width: 260px;
         height: 269px;

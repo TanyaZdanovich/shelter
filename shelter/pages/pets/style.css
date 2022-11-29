@@ -157,6 +157,7 @@ button {
     background-color: var(--color-primary);
 }
 .header__btns {display: none;}
+.header__menu-mobile {display: none;}
 
 /*pets*/
 .main__pets {background-color: var(--color-light-l);}
@@ -321,6 +322,9 @@ button {
         max-width: 100%;
         margin: 0 40px 0 40px;
     }
+    .pets__container {
+        margin: 80px 40px 100px 40px;
+    }
     .slider__cards {justify-content: center;}
     .footer__content {gap: 100px;}
 }
@@ -360,7 +364,6 @@ button {
     .container,
     .header__container,
     .footer__container {max-width: 300px;}
-    .our-pets__header.open {background: var(--color-dark-3xl);}
     .header__nav {
         position: fixed;
         top: 90px;
@@ -369,16 +372,38 @@ button {
         justify-content: center;
         align-items: flex-start;
         padding-top: 158px;
-        width: 100vw;
+        width: 320px;
         height: 100vh;
         background-color: var(--color-dark-3xl);
         transform: translateX(100%);
         transition: 0.3s;
         z-index: 100;
     }
+    .header__logo.open {
+        visibility: hidden;
+    }
+    .header__menu-mobile {
+        display: flex;
+        position: fixed;
+        top: 0;
+        right: 0;
+        display: flex;
+        height: 90px;
+        width: 320px;
+        padding: 30px 0 0 10px;
+        z-index: 1000;
+        background-color: var(--color-dark-3xl);
+        transform: translateX(100%);
+        transition: 0.3s;
+    }
+    .header__menu-mobile.open {transform: translateX(0%);}
+    .header__btns.open {
+        z-index: 2000;
+        transform: rotate(90deg);
+    }
     .header__nav.open {transform: translateX(0%);}
-    .logo__title.open {color: var(--color-primary);}
-    .logo__subtitle.open {color: var(--color-light-xl);}
+    .title-mobile.open {color: var(--color-primary);}
+    .subtitle-mobile.open {color: var(--color-light-xl);}
     .nav__list {
         display: flex;
         flex-direction: column;
@@ -396,9 +421,9 @@ button {
     .active .text {color: var(--color-light-s);}
     .nav__list .text:hover {color: var(--color-light-s);}
     .header__btns {
-        position: relative;
-        top: 0;
-        right: 43px;
+        position: absolute;
+        top: 48px;
+        right: 53px;
         display: block;
         width: 30px;
         height: 22px;
@@ -413,7 +438,6 @@ button {
     }
     .header__btn span:nth-child(2) {transform: translateY(10px);}
     .header__btn span:nth-child(3) {transform: translateY(20px);}
-    .header__btns.open {transform: rotate(90deg);}
     .header__btn .line.open {background-color: var(--color-primary);}
     .title {
         width: 100%;
@@ -447,4 +471,7 @@ button {
         height: 269px;
         background-size: contain;
     }
+}
+@media screen and (max-width:320px) {
+    .header__btns {right: 43px;}
 }

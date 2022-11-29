@@ -472,6 +472,3 @@ button {
         background-size: contain;
     }
 }
-@media screen and (max-width:320px) {
-    .header__btns {right: 43px;}
-}
